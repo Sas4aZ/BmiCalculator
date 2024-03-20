@@ -34,7 +34,7 @@ function calculateBMI() {
             displayHealthyWeight(height, weight,gender);
         } else if (bmi >= 18.5 && bmi < 25) {
             result += "You have a normal weight.";
-            displayHealthyWeight(height, weight, gender)
+            createAlert('add', 'success' , 'Hooray! You are in perfect shape.');
         } else if (bmi >= 25 && bmi < 30) {
             result += "You are overweight.";
             displayHealthyWeight(height, weight,gender);
@@ -50,7 +50,7 @@ function calculateBMI() {
             displayHealthyWeight(height, weight,gender);
         } else if (bmi >= 18.5 && bmi < 24) {
             result += "You have a normal weight.";
-            displayHealthyWeight(height, weight, gender)
+            createAlert('add', 'success' , 'Hooray! You are in perfect shape.');
         } else if (bmi >= 25 && bmi < 30) {
 
             result += "You are overweight.";
