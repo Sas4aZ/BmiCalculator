@@ -26,7 +26,7 @@ function calculateBMI() {
     bmi = bmi.toFixed(1); // Round to 1 decimal place
 
     var result = "Your BMI is " + bmi + ". ";
-    if (gender == "male") {
+    if (gender === "male") {
 
         if (bmi < 18.5) {
             result += "You are underweight.";
@@ -34,6 +34,7 @@ function calculateBMI() {
             displayHealthyWeight(height, weight,gender);
         } else if (bmi >= 18.5 && bmi < 25) {
             result += "You have a normal weight.";
+            displayHealthyWeight(height, weight, gender)
         } else if (bmi >= 25 && bmi < 30) {
             result += "You are overweight.";
             displayHealthyWeight(height, weight,gender);
@@ -42,13 +43,14 @@ function calculateBMI() {
             displayHealthyWeight(height, weight, gender);
         }
 
-    } else if (gender == "female") {
+    } else if (gender === "female") {
         if (bmi < 18.5) {
 
             result += "You are underweight.";
             displayHealthyWeight(height, weight,gender);
         } else if (bmi >= 18.5 && bmi < 24) {
             result += "You have a normal weight.";
+            displayHealthyWeight(height, weight, gender)
         } else if (bmi >= 25 && bmi < 30) {
 
             result += "You are overweight.";
