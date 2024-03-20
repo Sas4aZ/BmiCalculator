@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+</head>
+<body>
+
+
+<div id="container">
+    <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start" id="add">
+                <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">BMI calculator</h1>
+                <p class="col-lg-10 fs-4" id="result" >Body Mass Index is a simple calculation using a person's height and weight. A BMI of 25.0 or more is overweight, while the healthy range is 18.5 to 24.9.</p>
+
+                <div class="alert alert-primary" id="healthyWeight" role="alert">
+                    Your results will be shown here.
+                </div>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5">
+                <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" id="BMIcalculator" name="BMIcalculator">
+                    <div class="form mb-3">
+                        <div class="row">
+                            <div class="col-8">
+                                <input type="number" class="form-control" id="weight" placeholder="Enter weight">
+                            </div>
+                            <div class="col-4">
+                                <select id="weightUnit" class="form-select">
+                                    <option value="kg">kg</option>
+                                    <option value="lbs">lbs</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form mb-3">
+                        <div class="row">
+                        <div class="col-8">
+                            <input type="number" class="form-control" id="height" placeholder="Enter height">
+                        </div>
+                        <div class="col-4">
+                            <select id="heightUnit" class="form-select">
+                                <option value="m">m</option>
+                                <option value="cm">cm</option>
+                                <option value="ft">ft</option>
+                            </select>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label for="genderMale"> Male</label>
+                        <input type="radio" name="gender" value="male" id="genderMale" class="gender">
+                        <label for="genderFemale"> Female</label>
+                        <input type="radio" id="genderFemale" name="gender" value="female" class="gender">
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="button" onclick="calculateBMI(); return false">Calculate BMI</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!--    <h1>BMI Calculator</h1>-->
+<!--    <form id="BMICalculator" name="BMICalculator">-->
+<!--        <label for="weight">Weight:</label>-->
+<!--        <input type="number" id="weight" step="any">-->
+<!--        <select id="weightUnit">-->
+<!--            <option value="kg">kg</option>-->
+<!--            <option value="lbs">lbs</option>-->
+<!--        </select><br>-->
+<!--        <br>-->
+<!--        <label for="height">Height:</label>-->
+<!--        <input type="number" id="height" step="any">-->
+<!--        <select id="heightUnit1">-->
+<!--            <option value="m">m</option>-->
+<!--            <option value="cm">cm</option>-->
+<!--            <option value="ft">ft</option>-->
+<!--        </select><br><br>-->
+<!--        <label for="genderMale"> Male</label>-->
+<!--        <input type="radio" name="gender" value="male" id="genderMale" class="gender">-->
+<!--        <label for="genderFemale"> Female</label>-->
+<!--        <input type="radio" id="genderFemale" name="gender" value="female" class="gender">-->
+<!--        <br>-->
+<!--&lt;!&ndash;      <button type="button" onclick="calculateBMI()">Calculate BMI</button><br><br>&ndash;&gt;-->
+<!--    </form>-->
+<!--    <p id="result"></p>-->
+    <p id="genderResult"></p>
+
+</div>
+<script src="BMI_calculator/js/BMI_calculator.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</body>
+</html>
