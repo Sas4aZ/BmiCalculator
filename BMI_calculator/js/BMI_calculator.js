@@ -82,13 +82,19 @@ function displayHealthyWeight(height, weight, gender, alert_type) {
 }
 
 
-
+//createAlert creates an alert(class of bootstrap) inside the specified dom_element.
 function createAlert(dom_element, alert_type, text) {
+    //first remove the pre existing alert in the document.
+    // if this is not done, there will be multiple alerts on top on one another.
     var select = document.getElementById(dom_element);
     select.removeChild(select.lastElementChild);
+    //cretes a new element of div
     var element = document.createElement('div');
+    //adds alert class to the created div
     element.classList.add('alert');
     element.classList.add('alert-'+alert_type);
+    //adds text to the element
     element.innerText = text
+    //adds the elementt to the given dom element
     document.getElementById(dom_element).appendChild(element);
 }
