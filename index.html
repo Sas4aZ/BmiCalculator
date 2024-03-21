@@ -25,10 +25,10 @@
                     <div class="form mb-3">
                         <div class="row">
                             <div class="col-8">
-                                <input type="number" class="form-control" id="weight" placeholder="Enter weight">
+                                <input type="number" class="form-control" id="weight" min="0" placeholder="Enter weight" required>
                             </div>
                             <div class="col-4">
-                                <select id="weightUnit" class="form-select">
+                                <select id="weightUnit" class="form-select" required>
                                     <option value="kg">kg</option>
                                     <option value="lbs">lbs</option>
                                 </select>
@@ -38,10 +38,10 @@
                     <div class="form mb-3">
                         <div class="row">
                         <div class="col-8">
-                            <input type="number" class="form-control" id="height" placeholder="Enter height">
+                            <input type="number" class="form-control" id="height" min="0" placeholder="Enter height" required>
                         </div>
                         <div class="col-4">
-                            <select id="heightUnit" class="form-select">
+                            <select id="heightUnit" class="form-select" required>
                                 <option value="m">m</option>
                                 <option value="cm">cm</option>
                                 <option value="ft">ft</option>
@@ -51,9 +51,9 @@
                     </div>
                     <div class="checkbox mb-3">
                         <label for="genderMale"> Male</label>
-                        <input type="radio" name="gender" value="male" id="genderMale" class="gender">
+                        <input type="radio" name="gender" value="male" id="genderMale" class="gender" required>
                         <label for="genderFemale"> Female</label>
-                        <input type="radio" id="genderFemale" name="gender" value="female" class="gender">
+                        <input type="radio" id="genderFemale" name="gender" value="female" class="gender" required>
                     </div>
                     <button class="w-100 btn btn-lg btn-primary" type="button" onclick="calculateBMI(); return false">Calculate BMI</button>
                 </form>
