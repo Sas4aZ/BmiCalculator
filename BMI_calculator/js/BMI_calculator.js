@@ -77,14 +77,8 @@ function displayHealthyWeight(height, weight, gender, alert_type) {
 
     var result = "To achieve a healthy BMI, you should aim for a weight of approximately " + healthyWeightKg + " kg or " + healthyWeightLbs + " lbs.";
 
-    // Clear previous message
-    // document.getElementById("healthyWeight").innerText = "";
-
-    // Display new result
-
     createAlert('add', alert_type, result);
 
-    // document.getElementById("healthyWeight").innerText = result;
 }
 
 
